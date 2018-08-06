@@ -19,7 +19,7 @@ link_flags = ""
 #           FORTRAN_SYMBOLS_WITH_SINGLE_TRAILING_UNDERSCORE
 #           FORTRAN_SYMBOLS_WITH_DOUBLE_TRAILING_UNDERSCORES
 
-base_flags = "-DFORTRAN_SYMBOLS_WITH_SINGLE_TRAILING_UNDERSCORE -DNDEBUG "
+base_flags = "-DFORTRAN_SYMBOLS_WITH_SINGLE_TRAILING_UNDERSCORE -DNDEBUG -fpermissive "
 
 flags_noopt = base_flags
 
@@ -29,7 +29,7 @@ fflags = flags + "-fPIC "
 
 # Include directories.
 
-include_dirs = ["/usr/include/python2.5", "/usr/lib/python2.5/site-packages"]
+include_dirs = ["/usr/include/python", "/usr/lib/python/site-packages"]
 
 # Library directories.
 
@@ -37,7 +37,7 @@ library_dirs = []
 
 # Library names.
 
-libs = ["boost_python", "blitz", "lapack", "blas", "gfortran"]
+libs = ["boost_python3", "python3.6m", "blitz", "lapack", "blas", "gfortran"]
 
 # Command to strip library of excess symbols:
 
